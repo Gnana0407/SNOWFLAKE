@@ -1,0 +1,16 @@
+-- Customer Orders View
+-- This view combines customer and order information
+
+CREATE OR REPLACE VIEW MY_DATABASE.ANALYTICS.CUSTOMER_ORDERS AS
+SELECT 
+    c.CUSTOMER_ID,
+    c.FIRST_NAME,
+    c.LAST_NAME,
+    c.EMAIL,
+    o.ORDER_ID,
+    o.ORDER_DATE,
+    o.ORDER_AMOUNT,
+    o.STATUS
+FROM 
+    MY_DATABASE.RAW_DATA.CUSTOMERS c
+    LEFT JOIN MY_DATABASE.RAW_DATA.ORDERS o ON c.CUSTOMER_ID = o.CUSTOMER_ID;
