@@ -1,0 +1,14 @@
+# Snowflake Connector for Python
+snowflake-connector-python>=3.0.0
+
+# SQL Alchemy support for Snowflake
+snowflake-sqlalchemy>=1.5.0
+
+# Data manipulation
+pandas>=2.0.0
+
+# Environment variables
+python-dotenv>=1.0.0
+
+# Configuration management
+pyyaml>=6.0
